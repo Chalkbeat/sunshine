@@ -2,7 +2,7 @@
   "s3": {
     "stage": {
       "bucket": "test.chalkbeat.org",
-      "path": "sunshine"
+      "path": "conscientious-cowl"
     },
     "live": {
       "bucket": "projects.chalkbeat.org",
