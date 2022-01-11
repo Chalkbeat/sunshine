@@ -24,22 +24,32 @@
   display:block;
 
   a:link, a:visited {
-    background-color: @teal;
-    color: white;
+    color: @teal;
     padding: 16px 4px;
     margin-bottom: 3px;
     text-align: center;
     text-decoration: none;
-    border: 1px;
-    display: inline-block;
-    width:20%;
     border-radius: 10px;
   }
 
   a:hover, a:active {
-    background-color: @light-teal;
+    color: @light-teal;
   }
+
+
+  ul {
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+      width:20%;
+    }
+
+  }
+
 }
+
+
 
 .foia-box {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;

@@ -27,20 +27,25 @@
         <h1>Jump to your bureau</h1>
         <div class="jumplinks">
           <h4>National Bureaus</h4>
-          <% for (var law of json.laws) { %> 
-            <% if(law.state_cd == "") { %>
-              <a href="#<%= law.state %>"><%= law.state %></a>
+          <ul>
+            <% for (var law of json.laws) { %> 
+              <% if(law.state_cd == "") { %>
+                <li><a href="#<%= law.state %>"><%= law.state %></a></li>
+              <% } %>  
             <% } %>  
-          <% } %>  
+          </ul>
         </div>
         <div class="jumplinks">
           <h4>Chalkbeat Bureaus</h4>
-          <% for (var law of json.laws) { %> 
-            <% if(law.state_cd != "") { %>
-              <a href="#<%= law.state %>"><%= law.bureau %></a>
+          <ul>
+            <% for (var law of json.laws) { %> 
+              <% if(law.state_cd != "") { %>
+                <li><a href="#<%= law.state %>"><%= law.bureau %></a></li>
+              <% } %>  
             <% } %>  
-          <% } %>  
+          </ul>
         </div>
+
       </div>
 
       <div class="item" id="last-child">
