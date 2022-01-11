@@ -1,11 +1,11 @@
 {
-  "name": "sunshine-app",
+  "name": "sunshine",
   "description": "A FOIA helper",
   "version": "0.0.1",
   "author": "Kae Petrin",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chalkbeat/sunshine-app.git"
+    "url": "https://github.com/chalkbeat/sunshine.git"
   },
   "dependencies": {
     "@babel/core": "^7.4.3",

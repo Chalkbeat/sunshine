@@ -1,4 +1,4 @@
-sunshine-app
+sunshine
 ======================================================
 
 This news app is built on our `interactive template <https://github.com/chalkbeat/interactive-template>`_. Check the readme for that template for more details about the structure and mechanics of the app, as well as how to start your own project.
@@ -14,8 +14,8 @@ To run this project you will need:
 
 With those installed, you can then set the project up using your terminal:
 
-#. Pull the code - ``git clone git@github.com:chalkbeat/sunshine-app``
-#. Enter the project folder - ``cd sunshine-app``
+#. Pull the code - ``git clone git@github.com:chalkbeat/sunshine``
+#. Enter the project folder - ``cd sunshine``
 #. Install dependencies from NPM - ``npm install``
 #. Start the server - ``grunt``
 
