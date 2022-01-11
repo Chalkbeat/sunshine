@@ -5,7 +5,8 @@
   margin: 0 auto;
   
   .item {
-    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    padding-bottom: 20px;
     margin: 20px 0;
   }
 
@@ -13,13 +14,17 @@
     border-top: 1px dotted;
     opacity: 50%;
   }
+
+  #last-child {
+    border-bottom:none;
+  }
 }
 
 .jumplinks {
   display:block;
 
   a:link, a:visited {
-    background-color: #DDD;
+    background-color: @teal;
     color: white;
     padding: 16px 4px;
     margin-bottom: 3px;
@@ -28,14 +33,27 @@
     border: 1px;
     display: inline-block;
     width:20%;
+    border-radius: 10px;
   }
 
   a:hover, a:active {
-    background-color: rgba(221, 221, 221, 0.575);
+    background-color: @light-teal;
   }
 }
 
+.foia-box {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding: 2px 10px;
+  border-radius: 10px;
+  margin: 1em 0;
+  background-color: @light-teal;
+}
+
 details {
+
+  padding:inherit;
+  margin: 0.6em;
+
   em {
     font-size: 80%;
   }
@@ -43,5 +61,6 @@ details {
 
 copy-box {
   padding: 20px;
-  background: #DDD;
+  background: white;
+  border-radius: 10px;
 }
