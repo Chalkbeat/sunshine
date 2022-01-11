@@ -63,20 +63,26 @@
 
         <details>
           <summary>Data</summary>
-          <%
-          var text = t.include("template.txt", {law, section:"data"} );
-          var rendered = t.renderMarkdown(text);
-          print(rendered)
-          %>
+          <em>Click to copy the FOIA text</em>
+          <copy-box>
+            <%
+            var text = t.include("template.txt", {law, section:"data"} );
+            var rendered = t.renderMarkdown(text);
+            print(rendered)
+            %>
+          </copy-box>
         </details>
 
         <details>
           <summary>Documents</summary>
-          <%
-          var text = t.include("template.txt", {law, section:"records"} );
-          var rendered = t.renderMarkdown(text);
-          print(rendered)
-          %>
+          <em>Click to copy the FOIA text</em>
+          <copy-box>
+            <%
+            var text = t.include("template.txt", {law, section:"records"} );
+            var rendered = t.renderMarkdown(text);
+            print(rendered)
+            %>
+          </copy-box>
         </details>
 
         <hr>
