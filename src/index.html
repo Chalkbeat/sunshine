@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <%= t.include("partials/_head.html", grunt.data.json) %>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="item">
+        <% for (var [key, entry] of Object.entries(archieml.source.guide)) { %>
+          <div id="<%= key %>">
+            <div> 
+              <% if (entry.headline) { %>
+              <h1><%= entry.headline %></h1>
+              <% } %>
+              
+              <%= entry.text ? t.renderMarkdown(entry.text) : "" %>
+
+            </div>
+          </div>
+        <% } %>
+
+        <h1>Jump to your bureau</h1>
+        <div class="jumplinks">
+          <h4>National Bureaus</h4>
+          <% for (var law of json.laws) { %> 
+            <% if(law.state_cd == "") { %>
+              <a href="#<%= law.state %>"><%= law.state %></a>
+            <% } %>  
+          <% } %>  
+        </div>
+        <div class="jumplinks">
+          <h4>Chalkbeat Bureaus</h4>
+          <% for (var law of json.laws) { %> 
+            <% if(law.state_cd != "") { %>
+              <a href="#<%= law.state %>"><%= law.bureau %></a>
+            <% } %>  
+          <% } %>  
+        </div>
+
+        <h1>Bureau details</h1>
+
+        <% for (var law of json.laws) { %> 
+          <h3 style="display:inline" id="<%= law.state %>"><%= law.state %></h3> 
+          <h5 style="display:inline"><%= law.beat %> <%= law.bureau %> Bureau</h5>
+
+          <p><em>A quick guide to the <%= law.title %> (<%= law.title_short %>)</em></p>
+
+          <p><em>Timeline for response:</em></p>
+          <p><%= t.renderMarkdown(law.response_time) %></p>
+
+          <p><em>Your rights to data in a useful format:</em></p>
+          <p><%= t.renderMarkdown(law.rcfp_explain) %></p>
+
+          <p><em>Other things you should know:</em></p>
+          <p><%= t.renderMarkdown(law.notes) %></p>
+
+          <a href="<%= law.rcfp_link %>">Read more from RCFP.</a>
+        
+        <p><em>Select your FOIA type:</em></p>
+
+        <details>
+          <summary>Data</summary>
+          <%
+          var text = t.include("template.txt", {law, section:"data"} );
+          var rendered = t.renderMarkdown(text);
+          print(rendered)
+          %>
+        </details>
+
+        <details>
+          <summary>Documents</summary>
+          <%
+          var text = t.include("template.txt", {law, section:"records"} );
+          var rendered = t.renderMarkdown(text);
+          print(rendered)
+          %>
+        </details>
+
+        <hr>
+
+      <% } %>  
+      </div>
+    </div>
+
+    <script src="app.js" async></script>
+    <%= t.include("partials/_analytics.html") %>
+  </body>
+</html>

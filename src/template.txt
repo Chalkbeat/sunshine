@@ -1,0 +1,75 @@
+<%= new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: '2-digit'}).format(new Date()) %>
+
+[Custodian of records
+Name of agency
+Address of agency
+City, state, Zip code]
+
+Dear [name here]:
+
+Under the <%= law.statute %>, I am requesting a copy of the following public records:
+
+<% if(section == "data") { %>
+
+[If you know what the database is called, name the database and the fields you would like exported. If you do not, say “data responsive to show” and be as specific as you possibly can with what you want from the database.]
+
+[List database name, timeframe, and including but not limited to the following fields:]
+* [EXAMPLE LINE: All records and fields in the Building Permits Database for 1/1/2021 - 12/31/2021, including but not limited to unique IDs, date filed, date approved, and current status]
+
+In addition, please include the record layout (or data dictionary, schema, etc.) and any other documentation associated with this data.
+
+<% } else { %>
+
+[Describe the documents as specifically as possible. If you know the title of the document or any identifying information about it, such as who created it or what the document was called, be sure to include that.
+
+Include time period as well as any existing associated records that could be used to locate new records. Use names, form titles, email addresses, and formal identifiers wherever possible.
+
+If you are seeing internal communications (like emails, memos, etc) specify a date range and from whom and to the communications would be from. Try to offer specific key words the records officer can use to locate the documents. Be as specific as possible. 
+
+If you do not know the name of the records, say “records responsive to show” and explain as specifically as possible what you are seeking. Offer key words if possible. Say, “This should include but is not limited to all emails, memos, internal communications and reports.”]
+
+<% } %>
+
+<% if(section == "data") { %>
+
+According to <%= law.digital_law %>: <%= law.data_boiler %> 
+
+In keeping with that, I request that these records be provided in an electronic format that can be imported into standard database software. Examples include an Excel .xls or .xlsx file, an Access .mdb or .accdb file, a text-based delimited file (.csv, .txt., .tsv., etc.), a .dbf file or a SQL dump. (This would not include PDFs, which are not readable by database software.)
+
+Preferably provide these records by email, but if this is not possible I will accept the material on a CD mailed to my address. 
+
+<% } else { %>
+<% } %>
+
+As a reporter at the nonprofit news organization <%= law.beat %>, I will not be using these records for commercial gain. Rather the release of this information will be used in the public interest and will significantly contribute to the public understanding of [BE SPECIFIC: school operations and activities]. 
+
+<% if(law.waiver == "yes") { %>
+
+Because of this I would like to request a waiver of all fees associated with this request, in accordance with <%= law.fees_law %>. If a waiver is not granted, please notify me of the estimated fees and provide an itemized statement that describes each cost associated with this request.
+
+<% } else { %>
+
+In accordance with <%= law.fees_law %>, <%= law.fees_boiler %> Additionally, please provide an itemized statement that describes each cost associated with this request.
+
+<% } %>
+
+<% if(law.expedite == "TRUE") { %>
+
+I also ask that this request be expedited under terms of <%= law.expedite_law %>. Expedited processing is allowed for requests that show a “compelling need,” and your agency is primarily engaged in disseminating information, with an urgency to inform the public concerning federal government activity. 
+
+<%= law.expedite_boiler %>
+
+Our rationale for expedited processing under the “compelling need” stipulation is as follows:
+[Provide explicit reasoning for why this request should be expedited. Why is this document more important than the other documents they have public requests for?).]
+
+<% } %>
+
+If your agency believes all of this request is exempt from mandatory disclosure, please cite all applicable exemptions under the law that justify the agency’s refusal to disclose and notify me of the appeal procedures available to me under the law. If a portion of a record contains information that your agency believes is exempt from mandatory disclosure, please redact that portion, cite the applicable exemption(s) under the law and produce the public portion of the record.
+
+Also please contact me if you have any questions or need clarification regarding this request. In the interest of efficiency, please correspond with me via email with any responses or questions regarding this request rather than rely on regular mail.
+
+Thank you for your assistance.
+
+[Reporter's name, phone, email]
+
+<%= law.address %>
