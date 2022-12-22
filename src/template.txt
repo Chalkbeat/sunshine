@@ -1,4 +1,4 @@
-<%= new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: '2-digit'}).format(new Date()) %>
+<span class="todays-date"><%= new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: '2-digit'}).format(new Date()) %></span>
 
 [Custodian of records
 Name of agency

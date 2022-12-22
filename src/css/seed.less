@@ -20,16 +20,14 @@
   }
 }
 
+
 .jumplinks {
   display:block;
 
   a:link, a:visited {
     color: @teal;
-    padding: 16px 4px;
-    margin-bottom: 3px;
     text-align: center;
     text-decoration: none;
-    border-radius: 10px;
   }
 
   a:hover, a:active {
@@ -39,17 +37,21 @@
 
   ul {
     list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
 
     li {
-      display: inline-block;
-      width:20%;
+      flex: 0 0 20%;
+
+      @media @mobile {
+        padding: 0.25em;
+        flex: 0 0 50%;
+      }
     }
 
   }
 
 }
-
-
 
 .foia-box {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
