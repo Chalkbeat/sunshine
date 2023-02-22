@@ -41,7 +41,7 @@ Preferably provide these records by email, but if this is not possible I will ac
 <% } else { %>
 <% } %>
 
-As a reporter at the nonprofit news organization <%= law.beat %>, I will not be using these records for commercial gain. Rather the release of this information will be used in the public interest and will significantly contribute to the public understanding of [BE SPECIFIC: school operations and activities]. 
+As a reporter at the nonprofit news organization <%= law.beat %>, I will not be using these records for commercial gain. Rather the release of this information will be used in the public interest. 
 
 <% if(law.waiver == "yes") { %>
 
