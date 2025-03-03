@@ -17,6 +17,7 @@ With those installed, you can then set the project up using your terminal:
 #. Pull the code - ``git clone git@github.com:chalkbeat/sunshine``
 #. Enter the project folder - ``cd sunshine``
 #. Install dependencies from NPM - ``npm install``
+#. Run ``grunt docs`` and ``grunt sheets`` to refresh local copies of Google assets
 #. Start the server - ``grunt``
 
 Running tasks

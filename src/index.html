@@ -39,7 +39,27 @@
           <h4>Chalkbeat Bureaus</h4>
           <ul>
             <% for (var law of json.laws) { %> 
-              <% if(law.state_cd != "") { %>
+              <% if(law.beat == "Chalkbeat" & law.state_cd != "") { %>
+                <li><a href="#<%= law.state %>"><%= law.bureau %></a></li>
+              <% } %>  
+            <% } %>  
+          </ul>
+        </div>
+        <div class="jumplinks">
+          <h4>Healthbeat Bureaus</h4>
+          <ul>
+            <% for (var law of json.laws) { %> 
+              <% if(law.beat == "Healthbeat"  & law.state_cd != "") { %>
+                <li><a href="#<%= law.state %>"><%= law.bureau %></a></li>
+              <% } %>  
+            <% } %>  
+          </ul>
+        </div>
+        <div class="jumplinks">
+          <h4>Votebeat Bureaus</h4>
+          <ul>
+            <% for (var law of json.laws) { %> 
+              <% if(law.beat == "Votebeat"  & law.state_cd != "") { %>
                 <li><a href="#<%= law.state %>"><%= law.bureau %></a></li>
               <% } %>  
             <% } %>  

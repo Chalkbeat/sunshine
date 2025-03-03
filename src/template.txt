@@ -71,5 +71,3 @@ Also please contact me if you have any questions or need clarification regarding
 Thank you for your assistance.
 
 [Reporter's name, phone, email]
-
-<%= law.address %>

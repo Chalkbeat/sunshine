@@ -15,8 +15,8 @@
   "scripts": {
     "src/js/main.js": "build/app.js"
   },
-  "title": "Sunshine :: Chalkbeat",
-  "description": "A Localbeat guide for filing airtight FOIA requests",
+  "title": "Sunshine :: Civic News Co.",
+  "description": "A Civic News Company guide for filing airtight FOIA requests",
   "url": "",
   "image": "assets/logo.png",
   "analytics": {
