@@ -30,7 +30,7 @@
           <ul>
             <% for (var law of json.laws) { %> 
               <% if(law.state_cd == "") { %>
-                <li><a href="#<%= law.state %>"><%= law.state %></a></li>
+                <li><a href="#<%= law.beat %>-<%= law.state %>"><%= law.state %></a></li>
               <% } %>  
             <% } %>  
           </ul>
@@ -40,7 +40,7 @@
           <ul>
             <% for (var law of json.laws) { %> 
               <% if(law.beat == "Chalkbeat" & law.state_cd != "") { %>
-                <li><a href="#<%= law.state %>"><%= law.bureau %></a></li>
+                <li><a href="#<%= law.beat %>-<%= law.state %>"><%= law.bureau %></a></li>
               <% } %>  
             <% } %>  
           </ul>
@@ -50,7 +50,7 @@
           <ul>
             <% for (var law of json.laws) { %> 
               <% if(law.beat == "Healthbeat"  & law.state_cd != "") { %>
-                <li><a href="#<%= law.state %>"><%= law.bureau %></a></li>
+                <li><a href="#<%= law.beat %>-<%= law.state %>"><%= law.bureau %></a></li>
               <% } %>  
             <% } %>  
           </ul>
@@ -60,7 +60,7 @@
           <ul>
             <% for (var law of json.laws) { %> 
               <% if(law.beat == "Votebeat"  & law.state_cd != "") { %>
-                <li><a href="#<%= law.state %>"><%= law.bureau %></a></li>
+                <li><a href="#<%= law.beat %>-<%= law.state %>"><%= law.bureau %></a></li>
               <% } %>  
             <% } %>  
           </ul>
@@ -72,7 +72,7 @@
         <h1>Bureau details</h1>
 
         <% for (var law of json.laws) { %> 
-          <h3 style="display:inline" id="<%= law.state %>"><%= law.state %></h3> 
+          <h3 style="display:inline" id="<%= law.beat %>-<%= law.state %>"><%= law.state %></h3> 
           <h4 style="display:inline"><%= law.beat %> <%= law.bureau %> Bureau</h4>
 
           <h6>A quick guide to the <%= law.title %> (<%= law.title_short %>)</h6>
